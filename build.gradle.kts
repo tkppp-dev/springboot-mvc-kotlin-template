@@ -8,6 +8,8 @@ plugins {
     kotlin("plugin.spring") version "1.8.21"
     kotlin("plugin.jpa") version "1.8.21"
     kotlin("kapt") version "1.8.21"
+
+    groovy
 }
 
 allOpen {
@@ -37,6 +39,10 @@ dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     implementation("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    // Spock
+    testImplementation("org.codehaus.groovy:groovy-all:3.0.8")
+    testImplementation("org.spockframework:spock-core:2.0-groovy-3.0")
 }
 
 tasks.withType<KotlinCompile> {
