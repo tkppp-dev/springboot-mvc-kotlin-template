@@ -4,7 +4,6 @@ import com.tkppp.springtemplate.common.exception.ApiException
 import com.tkppp.springtemplate.common.exception.ErrorCode
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import kotlin.reflect.jvm.internal.impl.load.kotlin.JvmType
 
 @RestController
 @RequestMapping("/test")
