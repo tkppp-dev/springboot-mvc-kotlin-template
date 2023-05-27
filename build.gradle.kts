@@ -38,11 +38,14 @@ dependencies {
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     implementation("com.h2database:h2")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework.boot:spring-boot-starter-test") {
+        exclude("org.junit.vintage", "junit-vintage-engine")
+    }
 
     // Spock
     testImplementation("org.codehaus.groovy:groovy-all:3.0.8")
     testImplementation("org.spockframework:spock-core:2.0-groovy-3.0")
+    testImplementation("org.spockframework:spock-spring:2.0-groovy-3.0")
 }
 
 tasks.withType<KotlinCompile> {
